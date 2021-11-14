@@ -417,8 +417,8 @@ ifeq ($(COMPILE_PLATFORM),darwin)
     BASE_CFLAGS += $(SDL_INCLUDE)
     CLIENT_LDFLAGS = $(SDL_LIBS)
   else
-    BASE_CFLAGS += -I/Library/Frameworks/SDL2.framework/Headers
-    CLIENT_LDFLAGS = -F/Library/Frameworks -framework SDL2
+    BASE_CFLAGS += -I/opt/homebrew/include/SDL2 -D_THREAD_SAFE
+    CLIENT_LDFLAGS = -F/Library/Frameworks -L/opt/homebrew/lib -lSDL2
   endif
 
   DEBUG_CFLAGS = $(BASE_CFLAGS) -DDEBUG -D_DEBUG -g -O0

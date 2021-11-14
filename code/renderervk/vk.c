@@ -472,8 +472,8 @@ static void vk_create_swapchain( VkPhysicalDevice physical_device, VkDevice devi
 			present_mode = VK_PRESENT_MODE_FIFO_KHR;
 			image_count = MAX(MIN_SWAPCHAIN_IMAGES_FIFO, surface_caps.minImageCount);
 		}
-		if ( image_count < 2 ) {
-			image_count = 2;
+		if ( image_count < 3 ) {
+			image_count = 3;
 		}
 	}
 
